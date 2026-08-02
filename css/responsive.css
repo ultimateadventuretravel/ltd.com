@@ -1,0 +1,800 @@
+/*==================================================
+    ULTIMATE ADVENTURE TRAVEL PTY LTD
+    Responsive Stylesheet
+==================================================*/
+
+
+/*==================================================
+    LARGE TABLETS (1200px)
+==================================================*/
+
+@media (max-width:1200px){
+
+.container{
+
+    width:95%;
+
+}
+
+.hero-content h1{
+
+    font-size:52px;
+
+}
+
+.section-title{
+
+    font-size:38px;
+
+}
+
+.services-grid,
+.tours-grid,
+.job-grid,
+.footer-grid{
+
+    gap:25px;
+
+}
+
+}
+
+
+
+
+/*==================================================
+    TABLETS (992px)
+==================================================*/
+
+@media (max-width:992px){
+
+.container{
+
+    width:94%;
+
+}
+
+/* Header */
+
+header{
+
+    padding:15px 0;
+
+}
+
+.menu-btn{
+
+    display:flex;
+
+}
+
+nav{
+
+    position:fixed;
+
+    top:80px;
+
+    left:-100%;
+
+    width:100%;
+
+    height:calc(100vh - 80px);
+
+    background:#ffffff;
+
+    transition:.4s;
+
+    overflow-y:auto;
+
+    z-index:999;
+
+}
+
+nav.active{
+
+    left:0;
+
+}
+
+nav ul{
+
+    flex-direction:column;
+
+    padding:40px 25px;
+
+    gap:20px;
+
+}
+
+nav ul li{
+
+    width:100%;
+
+}
+
+nav ul li a{
+
+    display:block;
+
+    width:100%;
+
+    padding:12px 0;
+
+}
+
+/* Dropdown */
+
+.dropdown-menu{
+
+    position:static;
+
+    display:none;
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:none;
+
+    box-shadow:none;
+
+    border-radius:10px;
+
+    margin-top:10px;
+
+    padding-left:15px;
+
+}
+
+.dropdown.active .dropdown-menu{
+
+    display:block;
+
+}
+
+/* Hero */
+
+.hero{
+
+    min-height:90vh;
+
+    text-align:center;
+
+}
+
+.hero-content{
+
+    max-width:100%;
+
+}
+
+.hero-content h1{
+
+    font-size:46px;
+
+}
+
+.hero-content p{
+
+    font-size:18px;
+
+}
+
+/* Grids */
+
+.about-grid,
+.services-grid,
+.tours-grid,
+.job-grid,
+.contact-grid,
+.footer-grid{
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+}
+
+.about-image{
+
+    order:-1;
+
+}
+
+/* Cards */
+
+.service-card,
+.tour-card,
+.job-card{
+
+    margin:auto;
+
+    max-width:550px;
+
+}
+
+/* Forms */
+
+.contact-form{
+
+    width:100%;
+
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+
+    width:100%;
+
+}
+
+/* Footer */
+
+.footer-grid{
+
+    text-align:center;
+
+}
+
+.footer-social{
+
+    justify-content:center;
+
+}
+
+}
+/*==================================================
+    MOBILE DEVICES (768px)
+==================================================*/
+
+@media (max-width:768px){
+
+section{
+
+    padding:70px 0;
+
+}
+
+.hero{
+
+    min-height:85vh;
+
+    padding-top:100px;
+
+}
+
+.hero-content h1{
+
+    font-size:38px;
+
+    line-height:1.2;
+
+}
+
+.hero-content p{
+
+    font-size:17px;
+
+    margin:20px 0;
+
+}
+
+.section-title{
+
+    font-size:32px;
+
+}
+
+.section-subtitle{
+
+    font-size:16px;
+
+}
+
+.btn,
+.btn-primary,
+.btn-secondary{
+
+    width:100%;
+
+    justify-content:center;
+
+    margin-bottom:15px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.about-content{
+
+    text-align:center;
+
+}
+
+.about-content ul{
+
+    text-align:left;
+
+}
+
+.service-card,
+.tour-card,
+.job-card{
+
+    max-width:100%;
+
+}
+
+.contact-info{
+
+    text-align:center;
+
+}
+
+.contact-info .info-item{
+
+    justify-content:center;
+
+}
+
+.contact-form{
+
+    padding:25px;
+
+}
+
+.footer{
+
+    text-align:center;
+
+}
+
+.footer-links{
+
+    margin-top:20px;
+
+}
+
+.footer-links ul{
+
+    padding:0;
+
+}
+
+.footer-links li{
+
+    margin-bottom:10px;
+
+}
+
+img{
+
+    max-width:100%;
+
+    height:auto;
+
+}
+
+table{
+
+    display:block;
+
+    overflow-x:auto;
+
+    white-space:nowrap;
+
+}
+
+}
+
+
+
+
+/*==================================================
+    SMALL PHONES (576px)
+==================================================*/
+
+@media (max-width:576px){
+
+.container{
+
+    width:92%;
+
+}
+
+.hero-content h1{
+
+    font-size:32px;
+
+}
+
+.hero-content p{
+
+    font-size:16px;
+
+}
+
+.section-title{
+
+    font-size:28px;
+
+}
+
+.logo img{
+
+    max-height:50px;
+
+}
+
+.service-card,
+
+.tour-card,
+
+.job-card{
+
+    padding:20px;
+
+}
+
+.contact-form{
+
+    padding:20px;
+
+}
+
+.contact-form input,
+
+.contact-form select,
+
+.contact-form textarea{
+
+    padding:14px;
+
+    font-size:15px;
+
+}
+
+.footer-grid{
+
+    gap:30px;
+
+}
+
+.back-to-top{
+
+    width:45px;
+
+    height:45px;
+
+    bottom:20px;
+
+    right:20px;
+
+}
+
+}
+
+
+
+
+/*==================================================
+    EXTRA SMALL PHONES (480px)
+==================================================*/
+
+@media (max-width:480px){
+
+.hero{
+
+    min-height:80vh;
+
+}
+
+.hero-content h1{
+
+    font-size:28px;
+
+}
+
+.hero-content p{
+
+    font-size:15px;
+
+}
+
+.section-title{
+
+    font-size:25px;
+
+}
+
+.btn,
+
+.btn-primary,
+
+.btn-secondary{
+
+    padding:14px 20px;
+
+    font-size:15px;
+
+}
+
+.contact-form{
+
+    padding:18px;
+
+}
+
+.contact-form input,
+
+.contact-form textarea,
+
+.contact-form select{
+
+    font-size:14px;
+
+}
+
+.footer{
+
+    font-size:14px;
+
+}
+
+}
+
+
+
+
+/*==================================================
+    LANDSCAPE PHONES
+==================================================*/
+
+@media (max-height:500px) and (orientation:landscape){
+
+.hero{
+
+    min-height:120vh;
+
+}
+
+nav{
+
+    overflow-y:auto;
+
+}
+
+}
+/*==================================================
+    PROFESSIONAL MOBILE NAVIGATION
+==================================================*/
+
+@media (max-width:992px){
+
+    .menu-btn{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        width:45px;
+        height:45px;
+        cursor:pointer;
+        z-index:1001;
+    }
+
+    .menu-btn span{
+        width:28px;
+        height:3px;
+        margin:3px 0;
+        transition:.35s;
+        border-radius:20px;
+        background:#fff;
+    }
+
+    .menu-btn.active span:nth-child(1){
+        transform:translateY(9px) rotate(45deg);
+    }
+
+    .menu-btn.active span:nth-child(2){
+        opacity:0;
+    }
+
+    .menu-btn.active span:nth-child(3){
+        transform:translateY(-9px) rotate(-45deg);
+    }
+
+}
+
+
+/*==================================================
+    RESPONSIVE IMAGES
+==================================================*/
+
+img{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+
+/*==================================================
+    RESPONSIVE VIDEO
+==================================================*/
+
+video,
+iframe{
+    max-width:100%;
+    width:100%;
+    border:none;
+}
+
+
+/*==================================================
+    CONTACT FORM
+==================================================*/
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+
+    width:100%;
+    margin-bottom:18px;
+    box-sizing:border-box;
+
+}
+
+.contact-form textarea{
+
+    min-height:180px;
+    resize:vertical;
+
+}
+
+
+/*==================================================
+    BUTTONS
+==================================================*/
+
+.btn,
+.btn-primary,
+.btn-secondary{
+
+    transition:.35s ease;
+
+}
+
+@media(max-width:768px){
+
+    .btn,
+    .btn-primary,
+    .btn-secondary{
+
+        width:100%;
+
+    }
+
+}
+
+
+/*==================================================
+    FAQ
+==================================================*/
+
+.faq-item{
+
+    margin-bottom:18px;
+
+}
+
+.faq-question{
+
+    cursor:pointer;
+
+}
+
+.faq-answer{
+
+    overflow:hidden;
+
+}
+
+
+/*==================================================
+    FOOTER
+==================================================*/
+
+footer{
+
+    overflow:hidden;
+
+}
+
+footer img{
+
+    max-width:180px;
+
+}
+
+
+/*==================================================
+    WHATSAPP BUTTON
+==================================================*/
+
+.whatsapp-btn{
+
+    position:fixed;
+    right:20px;
+    bottom:25px;
+    z-index:999;
+
+}
+
+@media(max-width:768px){
+
+    .whatsapp-btn{
+
+        right:15px;
+        bottom:15px;
+
+    }
+
+}
+
+
+/*==================================================
+    BACK TO TOP
+==================================================*/
+
+.back-to-top{
+
+    transition:.35s;
+
+}
+
+@media(max-width:768px){
+
+    .back-to-top{
+
+        right:15px;
+        bottom:80px;
+
+    }
+
+}
+
+
+/*==================================================
+    SMOOTH SCROLL
+==================================================*/
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+/*==================================================
+    PREVENT OVERFLOW
+==================================================*/
+
+html,
+body{
+
+    overflow-x:hidden;
+
+}
+
+
+/*==================================================
+    END OF RESPONSIVE.CSS
+==================================================*/
