@@ -175,39 +175,45 @@ if(faqItems.length){
     });
 
 }
+```js
 /*==================================================
         ANIMATED COUNTERS
 ==================================================*/
 
-function animateCounter(counter){
+function animateCounter(counter) {
 
     const target = Number(counter.dataset.target);
 
-    if(isNaN(target)) return;
+    if (isNaN(target)) return;
 
-    let current = 0;
+    const duration = 1800; // Animation duration in milliseconds
+    const startTime = performance.now();
 
-    const increment = Math.max(1, Math.ceil(target / 120));
+    function updateCounter(currentTime) {
 
-    function updateCounter(){
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
 
-        current += increment;
+        // Smooth ease-out animation
+        const easeOut = 1 - Math.pow(1 - progress, 3);
 
-        if(current >= target){
-
-            counter.textContent = target.toLocaleString();
-
-            return;
-
-        }
+        const current = Math.floor(easeOut * target);
 
         counter.textContent = current.toLocaleString();
 
-        requestAnimationFrame(updateCounter);
+        if (progress < 1) {
+
+            requestAnimationFrame(updateCounter);
+
+        } else {
+
+            counter.textContent = target.toLocaleString();
+
+        }
 
     }
 
-    updateCounter();
+    requestAnimationFrame(updateCounter);
 
 }
 
@@ -216,35 +222,38 @@ function animateCounter(counter){
     COUNTER OBSERVER
 ==========================*/
 
-if(counters.length){
+if (counters.length) {
 
-    const counterObserver = new IntersectionObserver((entries, observer)=>{
+    const counterObserver = new IntersectionObserver(
+        (entries, observer) => {
 
-        entries.forEach(entry=>{
+            entries.forEach(entry => {
 
-            if(entry.isIntersecting){
+                if (entry.isIntersecting) {
 
-                animateCounter(entry.target);
+                    animateCounter(entry.target);
 
-                observer.unobserve(entry.target);
+                    observer.unobserve(entry.target);
 
-            }
+                }
 
-        });
+            });
 
-    },{
+        },
+        {
+            threshold: 0.5
+        }
+    );
 
-        threshold:0.5
 
-    });
-
-    counters.forEach(counter=>{
+    counters.forEach(counter => {
 
         counterObserver.observe(counter);
 
     });
 
 }
+```
 /*==================================================
         SCROLL REVEAL ANIMATIONS
 ==================================================*/
